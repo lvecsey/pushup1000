@@ -13,6 +13,12 @@ The program is designed to use the festival program for speech synthesis. With y
 sudo apt-get install festival
 ```
 
+To use the included C program variation, install the libyaml library:
+
+```console
+sudo apt-get install libyaml-dev
+```
+
 **Testing**
 
 ```console
@@ -31,6 +37,17 @@ Edit the percent line in *pushup1000.py* to a value between about 0.01 and 1.0 d
 python3 ./pushup1000.py
 ```
 
+*YAML Config and C program*
+
+Edit the *pushups.yml* file with the parameters for your daily workout. For example, you might increase the number of pushups by 10% at the start of each week.
+
+```console
+make pushup_routine
+./pushup_routine pushups.yml
+```
+
+The program will indicate how it is configured, when it starts up. A status line is output for each pushup event as a reference, in addition to the usual voicing of the audio playback.
+
 *Links*
 
-
+[libyaml](https://github.com/yaml/libyaml)
