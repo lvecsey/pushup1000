@@ -53,7 +53,7 @@ int fitness_msgloop(long int num_hours, long int num_pushups) {
       
       clock_gettime(CLOCK_REALTIME, &now);
 
-      elapsed_ts = subtract_ts(&now, &start);
+      elapsed_ts = subtract_ts(&start, &now);
       
       printf("[%ld.%09lds] Pushup #%ld\n", elapsed_ts.tv_sec, elapsed_ts.tv_nsec, pushup_idx);
 
